@@ -1,0 +1,33 @@
+apiVerion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: covid-summary
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covid-summary
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: covid-summary-app
+  template:
+    metadata:
+      labels:
+        app: covid-summary-app
+    spec:
+      containers:
+      - name: covid-summary
+        image: tfizz/covid-summary:1.0.0
+        ports:
+        - containerPort: 3000
