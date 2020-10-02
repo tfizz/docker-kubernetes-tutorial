@@ -1,7 +1,7 @@
 {
   "name": "docker-kubernetes-tutorial",
   "version": "1.0.0",
-  "description": "simple nodejs application to be packaged in docker and deployed with kubernetes",
+  "description": "simple nodejs application fetching covid19 summary data",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
