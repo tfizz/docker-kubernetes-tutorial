@@ -5,6 +5,6 @@ const port = 3000;
 
 const routes = require("./app/routes")(app);
 
-const server = app.listen(port,()=>{
+const server = app.listen(process.env.PORT || port,()=>{
     console.log(`Server started on ${server.address().address}:${server.address().port}`);
 });
