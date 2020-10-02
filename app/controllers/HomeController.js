@@ -1,5 +1,5 @@
 const axios = require('axios').default;
-const COVID_DATA_API_URL = "https://api.covid19api.com/summaryx";
+const COVID_DATA_API_URL = "https://api.covid19api.com/summary";
 
 /**
  * This method makes a get request to fetch the summary of covid19 cases from external url
