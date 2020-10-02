@@ -1,0 +1,17 @@
+{
+  "name": "docker-kubernetes-tutorial",
+  "version": "1.0.0",
+  "description": "simple nodejs application to be packaged in docker and deployed with kubernetes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tfizz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
