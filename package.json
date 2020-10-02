@@ -4,7 +4,8 @@
   "description": "simple nodejs application to be packaged in docker and deployed with kubernetes",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
   },
   "author": "tfizz",
   "license": "ISC",
