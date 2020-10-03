@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-service
+  name: covid-summary-service
 spec:
   selector:
     app: covid-summary
@@ -15,16 +15,16 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: covid-summary
+  name: covid-summary-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: covid-summary-app
+      app: covid-summary
   template:
     metadata:
       labels:
-        app: covid-summary-app
+        app: covid-summary
     spec:
       containers:
       - name: covid-summary
