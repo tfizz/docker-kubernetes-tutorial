@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  covidsummary:
+    build: ./
+    image: tfizz/covid-summary:1.0.0
+    restart: always
+    ports: 
+      - 80:3000
